@@ -5,7 +5,6 @@ public class BuildingSpawner : MonoBehaviour
 {
     [Header("Spawner Settings")]
     [SerializeField] private GameObject buildingPrefab;
-    [SerializeField] private float spawnInterval = 0.5f;
     [SerializeField] private int maxBuildings = 15;
 
     [Header("Spawn Area Bounds")]
@@ -17,8 +16,6 @@ public class BuildingSpawner : MonoBehaviour
     [Header("Spacing Prevention")]
     [SerializeField] private float minDistanceBetweenBuildings = 1.6f;
 
-    private float timer;
-    private int spawnedCount = 0;
     private List<Vector2> spawnedPositions = new List<Vector2>();
 
     void Start()

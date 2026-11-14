@@ -327,7 +327,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BuildingSpawner
   buildingPrefab: {fileID: 6536363947975331481, guid: 2fbd6ca5517038b459f6c3138a056cc7, type: 3}
-  spawnInterval: 1
   maxBuildings: 10
   minX: 0
   maxX: 6.5
@@ -1564,6 +1563,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 407300572949251879, guid: ac4d83e325de9c840af4c5a65d1c684c, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2475549375015075149, guid: ac4d83e325de9c840af4c5a65d1c684c, type: 3}
+      propertyPath: fireInterval
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4097351376412523502, guid: ac4d83e325de9c840af4c5a65d1c684c, type: 3}
       propertyPath: m_Name
       value: Player

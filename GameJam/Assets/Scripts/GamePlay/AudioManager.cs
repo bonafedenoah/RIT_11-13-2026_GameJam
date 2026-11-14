@@ -31,7 +31,7 @@ public class AudioManager : MonoBehaviour
         musicClips.Add(music5);
         musicClips.Add(music6);
 
-        musicSource.clip = musicClips[random.Next(musicClips.Count + 1)];
+        musicSource.clip = musicClips[random.Next(musicClips.Count)];
 
         musicSource.Play();
     }
