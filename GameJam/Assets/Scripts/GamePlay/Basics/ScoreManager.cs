@@ -62,7 +62,7 @@ public class ScoreManager : MonoBehaviour
         }
 
         UpdateScoreUI();
-        CheckWinCondition();
+        CheckLoseCondition();
     }
 
     private void UpdateScoreUI()
@@ -74,9 +74,12 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    private void CheckWinCondition()
+    private void CheckLoseCondition()
     {
-        
+        if(player.GetComponent<PlayerController>().Health <= 0)
+        {
+            TriggerGameOver("You Lose!");
+        }   
     }
 
     private void TriggerGameOver(string winnerMessage)

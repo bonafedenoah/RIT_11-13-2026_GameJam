@@ -327,10 +327,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreManager
   playerScore: 0
+  player: {fileID: 799605712}
   playerScoreText: {fileID: 1603538297}
   playerHealthText: {fileID: 1532302979}
   gameOverPanel: {fileID: 701108700}
-  winnerText: {fileID: 0}
+  winnerText: {fileID: 1347300491}
 --- !u!4 &294773879
 Transform:
   m_ObjectHideFlags: 0
@@ -911,6 +912,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 775809065}
   m_CullTransparentMesh: 1
+--- !u!1 &799605712 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4097351376412523502, guid: ac4d83e325de9c840af4c5a65d1c684c, type: 3}
+  m_PrefabInstance: {fileID: 3841522827483448446}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &811825092
 GameObject:
   m_ObjectHideFlags: 0
