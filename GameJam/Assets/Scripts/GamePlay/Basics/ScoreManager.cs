@@ -6,7 +6,7 @@ public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance { get; private set; }
 
-    [SerializeField] private int playerScore = 0;
+    private int playerScore;
     [SerializeField] GameObject player;
 
     [Header("UI Text References")]
@@ -38,7 +38,7 @@ public class ScoreManager : MonoBehaviour
 
     private void Start()
     {
-        UpdateScoreUI();
+        playerScore = 0;
 
         if (gameOverPanel != null)
         {
@@ -48,13 +48,15 @@ public class ScoreManager : MonoBehaviour
 
     private void Update()
     {
+        UpdateScoreUI();
+
         if (isGameOver && Input.GetKeyDown(KeyCode.Space))
         {
             RestartGame();
         }
     }
 
-    public void AddPlayer1Score()
+    public void UpdatePlayerScore()
     {
         if (isGameOver)
         {
@@ -69,7 +71,7 @@ public class ScoreManager : MonoBehaviour
     {
         if (playerScoreText != null)
         {
-            playerScoreText.text = "Score: "+playerScore.ToString();
+            playerScoreText.text = "Score: " + playerScore;
             playerHealthText.text = "Health: "+player.GetComponent<PlayerController>().Health.ToString();
         }
     }
@@ -105,5 +107,10 @@ public class ScoreManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void AddPlayerScore(int points)
+    {
+        playerScore += points;
     }
 }

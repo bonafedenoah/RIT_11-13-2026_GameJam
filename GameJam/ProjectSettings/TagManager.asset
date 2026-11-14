@@ -9,6 +9,7 @@ TagManager:
   - PlayerBullet
   - EnemyBullet
   - Enemy
+  - ScoreManager
   layers:
   - Default
   - TransparentFX

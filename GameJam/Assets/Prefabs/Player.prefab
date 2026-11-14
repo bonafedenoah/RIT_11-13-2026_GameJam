@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f55aa8015ea54424aaaa43bf34cef039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  health: 10
   speed: 10
   playerHalfHeight: 0.7
   spriteRenderer: {fileID: 0}
