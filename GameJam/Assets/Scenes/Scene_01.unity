@@ -328,7 +328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BuildingSpawner
   buildingPrefab: {fileID: 6536363947975331481, guid: 2fbd6ca5517038b459f6c3138a056cc7, type: 3}
   spawnInterval: 1
-  maxBuildings: 15
+  maxBuildings: 10
   minX: 0
   maxX: 6.5
   minY: -4
@@ -462,7 +462,7 @@ GameObject:
   - component: {fileID: 535799283}
   - component: {fileID: 535799282}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
