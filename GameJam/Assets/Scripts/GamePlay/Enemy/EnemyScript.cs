@@ -2,7 +2,11 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private float pointValue;
+
+
+
     void Start()
     {
         
