@@ -3,6 +3,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private int health = 10;
+
     [SerializeField] private float speed = 10f;
 
     [SerializeField] private float playerHalfHeight = 1.5f;
