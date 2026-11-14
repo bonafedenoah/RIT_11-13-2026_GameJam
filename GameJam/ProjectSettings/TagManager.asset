@@ -5,8 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - Audio
-  - Bullet
   - Building
+  - PlayerBullet
+  - EnemyBullet
+  - Enemy
   layers:
   - Default
   - TransparentFX
