@@ -5,6 +5,11 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private int health = 10;
 
+    public int Health
+    {
+        get { return health; }
+    }
+
     [SerializeField] private float speed = 10f;
 
     [SerializeField] private float playerHalfHeight = 1.5f;
