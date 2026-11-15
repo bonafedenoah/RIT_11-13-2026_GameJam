@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4367428141628351982}
   - component: {fileID: 1729940285333248727}
   - component: {fileID: 4773295200014073087}
-  - component: {fileID: 495904701187850650}
   - component: {fileID: -5588149163168989814}
+  - component: {fileID: -5063863274941024318}
   m_Layer: 0
   m_Name: Enemybullet
   m_TagString: EnemyBullet
@@ -136,7 +136,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 2
---- !u!61 &495904701187850650
+--- !u!114 &-5588149163168989814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7506920267174159576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46c5281a45207834ba86472337780a71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ThemedSprite
+  normalSprite: {fileID: -2705537103416471456, guid: fc267348d647a01498e3edac9d488cbc, type: 3}
+  altSprite: {fileID: -8183859016114565610, guid: e9a027132dd4ee84884d1af3a2499968, type: 3}
+--- !u!61 &-5063863274941024318
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,17 +196,3 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.04, y: 1.1333333}
   m_EdgeRadius: 0
---- !u!114 &-5588149163168989814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7506920267174159576}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46c5281a45207834ba86472337780a71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ThemedSprite
-  normalSprite: {fileID: -2705537103416471456, guid: fc267348d647a01498e3edac9d488cbc, type: 3}
-  altSprite: {fileID: -8183859016114565610, guid: e9a027132dd4ee84884d1af3a2499968, type: 3}
