@@ -356,6 +356,7 @@ GameObject:
   m_Component:
   - component: {fileID: 315091275}
   - component: {fileID: 315091274}
+  - component: {fileID: 315091276}
   m_Layer: 0
   m_Name: BuildingManager
   m_TagString: BuildingManager
@@ -397,6 +398,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &315091276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315091273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd2066b25a7730546bd2d9bad925d7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpriteThemeManager
+  playerNormalSprite: {fileID: 0}
+  buildingNormalSprite: {fileID: 0}
+  playerBulletNormalSprite: {fileID: 0}
+  playerAltSprite: {fileID: 0}
+  buildingAltSprite: {fileID: 0}
+  playerBulletAltSprite: {fileID: 0}
 --- !u!1 &441306952
 GameObject:
   m_ObjectHideFlags: 0
@@ -1839,7 +1858,6 @@ MonoBehaviour:
   music5: {fileID: 8300000, guid: 5366e334dec4a754b83e83f5081a58bc, type: 3}
   music6: {fileID: 8300000, guid: d29f134eb09bdf2439f5536f2b51fcc5, type: 3}
   victory: {fileID: 0}
-  musicClips: []
 --- !u!4 &1629411866
 Transform:
   m_ObjectHideFlags: 0

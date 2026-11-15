@@ -18,27 +18,53 @@ public class AudioManager : MonoBehaviour
     [Header("Sound Effects")]
     public AudioClip victory;
 
-    public List<AudioClip> musicClips = new List<AudioClip>();
-
-    System.Random random = new System.Random();
+    private List<AudioClip> musicClips = new List<AudioClip>();
 
     private void Start()
     {
-        musicClips.Add(music1); 
-        musicClips.Add(music2); 
-        musicClips.Add(music3); 
-        musicClips.Add(music4); 
-        musicClips.Add(music5);
-        musicClips.Add(music6);
+        AddIfNotNull(music1);
+        AddIfNotNull(music2);
+        AddIfNotNull(music3);
+        AddIfNotNull(music4);
+        AddIfNotNull(music5);
+        AddIfNotNull(music6);
 
-        musicSource.clip = musicClips[random.Next(musicClips.Count)];
+        PlayRandomMusic();
+    }
 
+    private void Update()
+    {
+        if (musicClips.Count > 0 && !musicSource.isPlaying)
+        {
+            PlayRandomMusic();
+        }
+    }
+
+    private void AddIfNotNull(AudioClip clip)
+    {
+        if (clip != null)
+        {
+            musicClips.Add(clip);
+        }
+    }
+
+    private void PlayRandomMusic()
+    {
+        if (musicClips.Count == 0)
+        {
+            return;
+        }
+
+        int randomIndex = Random.Range(0, musicClips.Count);
+        musicSource.clip = musicClips[randomIndex];
         musicSource.Play();
     }
 
-
     public void PlaySFX(AudioClip clip)
     {
-        SFXSource.PlayOneShot(clip);
+        if (clip != null)
+        {
+            SFXSource.PlayOneShot(clip);
+        }
     }
 }
