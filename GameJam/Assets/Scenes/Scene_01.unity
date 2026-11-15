@@ -379,10 +379,10 @@ MonoBehaviour:
   buildingPrefab: {fileID: 6536363947975331481, guid: 2fbd6ca5517038b459f6c3138a056cc7, type: 3}
   maxBuildings: 20
   minX: 3
-  maxX: 6.5
+  maxX: 6.3
   minY: -4
   maxY: 4
-  minDistanceBetweenBuildings: 0.8
+  minDistanceBetweenBuildings: 1.3
 --- !u!4 &315091275
 Transform:
   m_ObjectHideFlags: 0
@@ -2173,11 +2173,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8405900750992715692, guid: ac4d83e325de9c840af4c5a65d1c684c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.5
+      value: 8.09
       objectReference: {fileID: 0}
     - target: {fileID: 8405900750992715692, guid: ac4d83e325de9c840af4c5a65d1c684c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8405900750992715692, guid: ac4d83e325de9c840af4c5a65d1c684c, type: 3}
       propertyPath: m_LocalPosition.z

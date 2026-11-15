@@ -8,6 +8,8 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager Instance { get; private set; }
 
     private int playerScore;
+    private float scoreMultiplier;
+
     [SerializeField] GameObject player;
 
     [Header("UI Text References")]
@@ -22,6 +24,7 @@ public class ScoreManager : MonoBehaviour
     AudioManager audioManager;
 
     private BuildingSpawner buildingSpawner;
+    private SpriteThemeManager spriteThemeManager;
 
     private bool isGameOver = false;
 
@@ -29,6 +32,7 @@ public class ScoreManager : MonoBehaviour
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         buildingSpawner = GameObject.FindGameObjectWithTag("BuildingManager").GetComponent<BuildingSpawner>();
+        spriteThemeManager = GameObject.FindGameObjectWithTag("BuildingManager").GetComponent<SpriteThemeManager>();
 
         if (Instance == null)
         {
@@ -119,6 +123,19 @@ public class ScoreManager : MonoBehaviour
 
     public void AddPlayerScore(int points)
     {
-        playerScore += points;
+        GetScoreMultiplier();
+        playerScore += (int)(points * scoreMultiplier);
+    }
+
+    private void GetScoreMultiplier()
+    {
+        if (!spriteThemeManager.IsAlternateTheme)
+        {
+            scoreMultiplier = 1.5f;
+        }
+        else
+        {
+            scoreMultiplier = 1.0f;
+        }
     }
 }

@@ -7,6 +7,13 @@ public class SpriteThemeManager : MonoBehaviour
 
     private bool isAlternateTheme = false;
 
+    public bool IsAlternateTheme
+    {
+        get
+        {
+            return isAlternateTheme;
+        }
+    }
 
     public delegate void ThemeChangeHandler(bool altTheme);
     public static event ThemeChangeHandler OnThemeChanged;

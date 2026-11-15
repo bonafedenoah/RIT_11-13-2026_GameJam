@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.67515, y: 0.44643, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,12 +84,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 109782684461013859, guid: 1104aaa3fd38200478c618e5f4612b58, type: 3}
+  m_Sprite: {fileID: 109782684461013859, guid: 2e0f4e8a86fe059499ce97129a2daac3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.86, y: 0.89}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -124,7 +124,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -132,13 +132,13 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9777778, y: 0.9777778}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 0.86, y: 0.89}
+    newSize: {x: 0.86, y: 0.89}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.86, y: 0.89}
   m_EdgeRadius: 0
 --- !u!114 &-4532209504434284154
 MonoBehaviour:
@@ -164,5 +164,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46c5281a45207834ba86472337780a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemedSprite
-  normalSprite: {fileID: 109782684461013859, guid: 1104aaa3fd38200478c618e5f4612b58, type: 3}
-  altSprite: {fileID: -2928525448794330559, guid: fbd84433e70933b4e9275a641eaa8ea6, type: 3}
+  normalSprite: {fileID: 109782684461013859, guid: 2e0f4e8a86fe059499ce97129a2daac3, type: 3}
+  altSprite: {fileID: -2928525448794330559, guid: 05e64a1608ac62346ab9f7fbf4977c74, type: 3}
