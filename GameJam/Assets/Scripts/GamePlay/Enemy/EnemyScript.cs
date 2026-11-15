@@ -33,5 +33,11 @@ public class EnemyScript : MonoBehaviour
             Destroy(this.gameObject);
             scoreManager.AddPlayerScore(pointValue);
         }
+
+        if (collision.tag == "KillBox")
+        {
+            Destroy(this.gameObject);
+            scoreManager.AddPlayerScore(-pointValue);
+        }
     }
 }
