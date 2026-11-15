@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private SpriteRenderer spriteRenderer;
 
-    private bool reversedControls = false;
+    private bool reversedControls = true;
 
     private Vector2 playerDirection;
 
@@ -28,25 +28,15 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         mainCamera = Camera.main;
 
-        rb=GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-
-        if (spriteRenderer == null)
-        {
-            spriteRenderer = GetComponent<SpriteRenderer>();
-        }
-
-        if (spriteRenderer != null)
-        {
-            spriteRenderer.color = Color.black;
-        }
     }
 
     // Update is called once per frame
@@ -84,10 +74,11 @@ public class PlayerController : MonoBehaviour
                     PlayerRawInput.y -= 1f;
                 }
 
-                if (Keyboard.current.iKey.wasPressedThisFrame)
+                if (Keyboard.current.iKey.isPressed)
                 {
-                    ToggleControlsFlip();
+                    reversedControls = true;
                 }
+
             }
             else
             {
@@ -100,9 +91,9 @@ public class PlayerController : MonoBehaviour
                     PlayerRawInput.y += 1f;
                 }
 
-                if (Keyboard.current.iKey.wasPressedThisFrame)
+                if (Keyboard.current.iKey.isPressed)
                 {
-                    ToggleControlsFlip();
+                    reversedControls = false;
                 }
             }
         }

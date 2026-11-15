@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: -4186049820342682318}
   - component: {fileID: 508418988450561917}
   - component: {fileID: -4933650128086012393}
+  - component: {fileID: 2707624128559318763}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -117,7 +118,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 3334865718093442776, guid: 9b1ad2f08b9231349bc8248c140616eb, type: 3}
+  m_Sprite: {fileID: 1450320652989198097, guid: aa1dfdb21e227cd42a154c65d14ccf8d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -235,3 +236,17 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7506920267174159576, guid: 2fe50986915e9d44a91cd73b3925fd44, type: 3}
   firePoint: {fileID: 3061335213890494330}
   fireInterval: 1.75
+--- !u!114 &2707624128559318763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138872729147706580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46c5281a45207834ba86472337780a71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ThemedSprite
+  normalSprite: {fileID: 1450320652989198097, guid: aa1dfdb21e227cd42a154c65d14ccf8d, type: 3}
+  altSprite: {fileID: 3334865718093442776, guid: 9b1ad2f08b9231349bc8248c140616eb, type: 3}

@@ -1,8 +1,12 @@
 using UnityEngine;
 
-
+[RequireComponent(typeof(SpriteRenderer))]
 public class ThemedSprite : MonoBehaviour
 {
+    [Header("Sprite Variations")]
+    [SerializeField] private Sprite normalSprite;
+    [SerializeField] private Sprite altSprite;
+
     private SpriteRenderer spriteRenderer;
 
     void Awake()
@@ -12,35 +16,35 @@ public class ThemedSprite : MonoBehaviour
 
     void OnEnable()
     {
-        SpriteThemeManager.OnThemeChanged += UpdateSprite;
+        SpriteThemeManager.OnThemeChanged += HandleThemeChanged;
 
         if (SpriteThemeManager.Instance != null)
         {
-            UpdateSprite(SpriteThemeManager.Instance.IsAlternate());
+            ApplyTheme(SpriteThemeManager.Instance.IsAlternate());
         }
     }
 
     void OnDisable()
     {
-        SpriteThemeManager.OnThemeChanged -= UpdateSprite;
+        SpriteThemeManager.OnThemeChanged -= HandleThemeChanged;
     }
 
-    void UpdateSprite(bool altTheme)
+    private void HandleThemeChanged(bool isAlt)
     {
-        if (spriteRenderer == null || SpriteThemeManager.Instance == null) return;
+        ApplyTheme(isAlt);
+    }
 
-        if (CompareTag("Player"))
+    private void ApplyTheme(bool isAlt)
+    {
+        if (spriteRenderer == null) return;
+
+        if (isAlt && altSprite != null)
         {
-            spriteRenderer.sprite = altTheme ? SpriteThemeManager.Instance.playerAltSprite : SpriteThemeManager.Instance.playerNormalSprite;
+            spriteRenderer.sprite = altSprite;
         }
-        else if (CompareTag("EnemyBullet") || name.Contains("bullet"))
+        else if (!isAlt && normalSprite != null)
         {
-            spriteRenderer.sprite = altTheme ? SpriteThemeManager.Instance.playerBulletAltSprite : 
-                SpriteThemeManager.Instance.playerBulletNormalSprite;
-        }
-        else // Default to building/enemy
-        {
-            spriteRenderer.sprite = altTheme ? SpriteThemeManager.Instance.buildingAltSprite : SpriteThemeManager.Instance.buildingNormalSprite;
+            spriteRenderer.sprite = normalSprite;
         }
     }
 }

@@ -44,6 +44,8 @@ GameObject:
   - component: {fileID: 5010521395198739707}
   - component: {fileID: 4713004309523308102}
   - component: {fileID: 2475549375015075149}
+  - component: {fileID: 6231245002905362344}
+  - component: {fileID: 4295018321225560310}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -116,8 +118,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1946529539969087783, guid: 8d74c436808e6074dab27575c931559a, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -5514696779878727902, guid: ecb3f3f5b2ecbdd4bb527d43a2d91bfd, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -139,7 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   health: 10
-  speed: 10
+  speed: 8
   playerHalfHeight: 0.7
   spriteRenderer: {fileID: 0}
 --- !u!50 &4713004309523308102
@@ -168,7 +170,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &2475549375015075149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,4 +185,99 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerShooting
   bulletPrefab: {fileID: 7506920267174159576, guid: 84826ecc32f1b96438662af0a1db4832, type: 3}
   firePoint: {fileID: 3222017079439686520}
-  fireInterval: 0.3
+  fireInterval: 0.2
+--- !u!60 &6231245002905362344
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4097351376412523502}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.53, y: 1.22}
+    newSize: {x: 1.53, y: 1.22}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.16499999, y: -0.37}
+      - {x: 0.125, y: -0.19}
+      - {x: 0.565, y: -0.31}
+      - {x: 0.745, y: -0.31}
+      - {x: 0.765, y: -0.29}
+      - {x: 0.765, y: -0.13}
+      - {x: 0.60499996, y: 0.03}
+      - {x: 0.355, y: 0.25}
+      - {x: 0.205, y: 0.29999998}
+      - {x: 0.155, y: 0.45}
+      - {x: 0.044999998, y: 0.61}
+      - {x: -0.044999998, y: 0.61}
+      - {x: -0.13499999, y: 0.44}
+      - {x: -0.235, y: 0.25}
+      - {x: -0.285, y: 0.25}
+      - {x: -0.315, y: 0.22}
+      - {x: -0.415, y: 0.17999999}
+      - {x: -0.45499998, y: 0.14}
+      - {x: -0.545, y: 0.06}
+      - {x: -0.585, y: 0.02}
+      - {x: -0.685, y: -0.049999997}
+      - {x: -0.765, y: -0.13}
+      - {x: -0.765, y: -0.29}
+      - {x: -0.745, y: -0.31}
+      - {x: -0.555, y: -0.32}
+      - {x: -0.36499998, y: -0.26}
+      - {x: -0.325, y: -0.19999999}
+      - {x: -0.16499999, y: -0.37}
+      - {x: -0.24499999, y: -0.42}
+      - {x: -0.275, y: -0.59999996}
+      - {x: -0.255, y: -0.61}
+      - {x: 0.265, y: -0.61}
+      - {x: 0.275, y: -0.59999996}
+      - {x: 0.265, y: -0.45999998}
+  m_UseDelaunayMesh: 1
+--- !u!114 &4295018321225560310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4097351376412523502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46c5281a45207834ba86472337780a71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ThemedSprite
+  normalSprite: {fileID: -5514696779878727902, guid: ecb3f3f5b2ecbdd4bb527d43a2d91bfd, type: 3}
+  altSprite: {fileID: 7098492315185506558, guid: 00cfb7557cd0bd746ac33d79f7d290c3, type: 3}

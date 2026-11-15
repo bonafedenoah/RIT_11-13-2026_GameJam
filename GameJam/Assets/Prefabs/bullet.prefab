@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1729940285333248727}
   - component: {fileID: 4773295200014073087}
   - component: {fileID: 495904701187850650}
+  - component: {fileID: -4936036049745443069}
   m_Layer: 0
   m_Name: bullet
   m_TagString: PlayerBullet
@@ -181,3 +182,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.04, y: 1.1333333}
   m_EdgeRadius: 0
+--- !u!114 &-4936036049745443069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7506920267174159576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46c5281a45207834ba86472337780a71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ThemedSprite
+  normalSprite: {fileID: -7786831213723625914, guid: 70279277fbe94404395fa1988118a366, type: 3}
+  altSprite: {fileID: 4493535348710057686, guid: 1bb5b2769a27e4c4b94e83aede25e786, type: 3}
