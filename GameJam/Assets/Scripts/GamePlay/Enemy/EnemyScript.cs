@@ -25,13 +25,13 @@ public class EnemyScript : MonoBehaviour
         rb.MovePosition(position);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "PlayerBullet")
+        if (collision.tag == "PlayerBullet")
         {
-            scoreManager.AddPlayerScore(pointValue);
-            Destroy(this.gameObject);
             Destroy(collision.gameObject);
+            Destroy(this.gameObject);
+            scoreManager.AddPlayerScore(pointValue);
         }
     }
 }

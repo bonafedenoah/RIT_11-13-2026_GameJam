@@ -6,6 +6,20 @@ public class BuildingSpawner : MonoBehaviour
     [Header("Spawner Settings")]
     [SerializeField] private GameObject buildingPrefab;
     [SerializeField] private int maxBuildings = 15;
+    private int currentBuildings = 0;
+
+    public int CurrentBuildings
+    {
+        get
+        {
+            return currentBuildings;
+        }
+
+        set
+        {
+            currentBuildings = value;
+        }
+    }
 
     [Header("Spawn Area Bounds")]
     [SerializeField] private float minX = 4f;
@@ -21,6 +35,7 @@ public class BuildingSpawner : MonoBehaviour
     void Start()
     {
         SpawnAllBuildings();
+        currentBuildings = spawnedPositions.Count;
     }
 
     void SpawnAllBuildings()

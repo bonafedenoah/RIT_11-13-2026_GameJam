@@ -10,6 +10,7 @@ TagManager:
   - EnemyBullet
   - Enemy
   - ScoreManager
+  - BuildingManager
   layers:
   - Default
   - TransparentFX

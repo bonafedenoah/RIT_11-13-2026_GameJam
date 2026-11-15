@@ -133,4 +133,13 @@ public class PlayerController : MonoBehaviour
             spriteRenderer.color = Color.black;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "EnemyBullet")
+        {
+            Destroy(collision.gameObject);
+            health--;
+        }
+    }
 }

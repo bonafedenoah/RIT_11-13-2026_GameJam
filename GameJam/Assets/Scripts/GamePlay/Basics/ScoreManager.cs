@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
@@ -20,11 +21,14 @@ public class ScoreManager : MonoBehaviour
     [Header("Victory Sound")]
     AudioManager audioManager;
 
+    private BuildingSpawner buildingSpawner;
+
     private bool isGameOver = false;
 
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        buildingSpawner = GameObject.FindGameObjectWithTag("BuildingManager").GetComponent<BuildingSpawner>();
 
         if (Instance == null)
         {
@@ -48,9 +52,9 @@ public class ScoreManager : MonoBehaviour
 
     private void Update()
     {
-        UpdateScoreUI();
+        UpdatePlayerScore();
 
-        if (isGameOver && Input.GetKeyDown(KeyCode.Space))
+        if (isGameOver && Keyboard.current.spaceKey.isPressed)
         {
             RestartGame();
         }
@@ -80,19 +84,23 @@ public class ScoreManager : MonoBehaviour
     {
         if(player.GetComponent<PlayerController>().Health <= 0)
         {
-            TriggerGameOver("You Lose!");
+            TriggerGameOver("You Lose!\n" +
+                            "\nYou Scored " + playerScore + " Points!");
         }   
+        else if(buildingSpawner.CurrentBuildings<=0)
+        {
+            TriggerGameOver("You Lose!\n" +
+                            "\nYou Scored " + playerScore + " Points!");
+        }
     }
 
-    private void TriggerGameOver(string winnerMessage)
+    private void TriggerGameOver(string LosingMessage)
     {
         isGameOver = true;
 
-        audioManager.PlaySFX(audioManager.victory);
-
         if (winnerText != null)
         {
-            winnerText.text = winnerMessage;
+            winnerText.text = LosingMessage;
         }
 
         if (gameOverPanel != null)
