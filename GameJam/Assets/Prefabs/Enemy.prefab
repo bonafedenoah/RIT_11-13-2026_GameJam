@@ -143,7 +143,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 2138872729147706580}
   rb: {fileID: -4186049820342682318}
   pointValue: 50
-  speed: 10
+  speed: 5
 --- !u!50 &-4186049820342682318
 Rigidbody2D:
   serializedVersion: 5
@@ -185,7 +185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerShooting
   bulletPrefab: {fileID: 7506920267174159576, guid: 2fe50986915e9d44a91cd73b3925fd44, type: 3}
   firePoint: {fileID: 3061335213890494330}
-  fireInterval: 1.75
+  fireInterval: 1
 --- !u!114 &2707624128559318763
 MonoBehaviour:
   m_ObjectHideFlags: 0
